@@ -3,7 +3,7 @@
 
 create below resource variable.
 
-**`gmail.username=<yourgmail>`,** <br>
+**`gmail.username=<yourgmail>`** <br>
 **`gmail.password=<yourpassword>`**
 
 mvn package <br>
