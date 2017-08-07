@@ -1,32 +1,37 @@
-package io.pivotal.firebase;
-import java.io.Serializable;
-/**
- * Created by svennela on 3/19/17.
- */
-public class User implements Serializable {
+package io.pivotal.firebase.domain;
 
-    private String id;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+/**
+ * Created by svennela on 8/4/17.
+ */
+
+@Entity
+public class User {
+
+
+
+    @Id
+    @GeneratedValue
+    private int id;
+
     private String email;
+
     private String fullname;
     private String message;
     private String status;
 
-    public int getDbid() {
-        return dbid;
-    }
 
-    public void setDbid(int dbid) {
-        this.dbid = dbid;
-    }
-
-    private int dbid;
-
-
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -65,5 +70,5 @@ public class User implements Serializable {
 
 
 
-
 }
+
